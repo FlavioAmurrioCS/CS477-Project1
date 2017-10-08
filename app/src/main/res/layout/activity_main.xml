@@ -21,23 +21,27 @@
         android:textSize="40sp"/>
     <Spinner
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/qType">
 
     </Spinner>
     <Spinner
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/qSubType">
 
     </Spinner>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GO"/>
+        android:text="GO"
+        android:onClick="startQuiz"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score: /0"/>
+        android:text="Score: /0"
+        android:id="@+id/scoreText"/>
 
 </LinearLayout>

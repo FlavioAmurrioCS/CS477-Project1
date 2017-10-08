@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Project1</string>
+
+    <string-array name="qType_array">
+        <item>Hex To Decimal</item>
+        <item>Decimal To Hex Signed</item>
+        <item>Decimal To Hex Unsigned</item>
+    </string-array>
+    <string-array name="qSubType_array">
+        <item>6 bits</item>
+        <item>8 bits</item>
+        <item>10 bits</item>
+    </string-array>
 </resources>
