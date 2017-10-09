@@ -18,16 +18,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="What type of question would you like?"
-        android:textSize="40sp"/>
+        android:textSize="40sp"
+        android:padding="30dp"/>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scrollbarSize="30dp"
+        android:padding="20dp"
         android:id="@+id/qType">
 
     </Spinner>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scrollbarSize="30dp"
+        android:padding="20dp"
         android:id="@+id/qSubType">
 
     </Spinner>
@@ -35,12 +40,14 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:text="GO"
         android:onClick="startQuiz"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="30dp"
         android:text="Score: /0"
         android:id="@+id/scoreText"/>
 
