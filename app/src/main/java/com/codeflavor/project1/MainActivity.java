@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         qType = findViewById(R.id.qType);
-        qSubType = (Spinner) findViewById(R.id.qSubType);
+        qSubType = findViewById(R.id.qSubType);
         scoreText = findViewById(R.id.scoreText);
 
         ArrayAdapter<CharSequence> qTypeAdapter = ArrayAdapter.createFromResource(this,
@@ -34,27 +33,23 @@ public class MainActivity extends AppCompatActivity {
                 R.array.qSubType_array, android.R.layout.simple_spinner_item);
         qSubTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         qSubType.setAdapter(qSubTypeAdapter);
-        updateScore();
+        scoreText.setText("Score: " + score + "/" + totalPossible);
     }
 
 
     public void startQuiz(View view) {
         bitMode = getBit();
         Intent intent = null;
-        switch (qType.getSelectedItem().toString())
-        {
+        switch (qType.getSelectedItem().toString()) {
             case "Hex To Decimal": //Decimal To Hex it was wrong on the demo app
-                intent = new Intent(this, DecimalToHexActivity.class);
+                intent = new Intent(this, HexToDecimal.class);
                 break;
             case "Decimal To Hex Signed":
-                intent = new Intent(this, HexToDecimalSignedActivity.class);
+                intent = new Intent(this, DecimalToHexSigned.class);
                 break;
             case "Decimal To Hex Unsigned":
-                intent = new Intent(this, HexToDecimalUnsignedActivity.class);
+                intent = new Intent(this, DecimalToHexUnsigned.class);
                 break;
-            default:
-                Toast.makeText(this, "Error Decting Class", Toast.LENGTH_LONG).show();
-                return;
         }
         startActivityForResult(intent, 1);
     }
@@ -62,18 +57,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        updateScore();
-    }
-
-    public void updateScore()
-    {
         scoreText.setText("Score: " + score + "/" + totalPossible);
     }
-    public int getBit()
-    {
+
+    public int getBit() {
         int ret = 0;
-        switch (qSubType.getSelectedItem().toString())
-        {
+        switch (qSubType.getSelectedItem().toString()) {
             case "6 bits":
                 ret = 6;
                 break;
@@ -83,8 +72,6 @@ public class MainActivity extends AppCompatActivity {
             case "10 bits":
                 ret = 10;
                 break;
-            default:
-                Toast.makeText(this, "Error",Toast.LENGTH_LONG).show();
         }
         return ret;
     }

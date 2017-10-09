@@ -2,44 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.codeflavor.project1.HexToDecimalSignedActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="20dp"
+    tools:context="com.codeflavor.project1.DecimalToHexUnsigned">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Decimal To Hex Signed"
+        android:text="Decimal To Hex Unsigned"
         android:textSize="30sp"
         android:textAlignment="center"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question Section"
-        android:id="@+id/sQuestion"
+        android:id="@+id/uQuestion"
         android:textSize="20sp"/>
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/sRadioGroup">
+        android:id="@+id/uRadioGroup">
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/sSmall"
-            android:text="Value is too small"
-            android:checked="true"/>
+            android:id="@+id/uSmall"
+            android:checked="true"
+            android:text="Value is too small"/>
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/sLarge"
+            android:id="@+id/uLarge"
             android:text="Value is too large"/>
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Value is: "
-            android:id="@+id/sValue"/>
+            android:id="@+id/uValue"/>
     </RadioGroup>
     <LinearLayout
         android:layout_width="match_parent"
@@ -48,32 +48,31 @@
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/sOne"></Spinner>
+            android:id="@+id/uOne"></Spinner>
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/sTwo"></Spinner>
+            android:id="@+id/uTwo"></Spinner>
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/sThree"></Spinner>
+            android:id="@+id/uThree"></Spinner>
     </LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Check My Answer"
-        android:id="@+id/sCheck"
-        android:onClick="sCheckMyAnswer"/>
+        android:id="@+id/uCheck"
+        android:onClick="uCheckMyAnswer"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Answer: "
         android:visibility="invisible"
-        android:id="@+id/sAnswer"/>
+        android:id="@+id/uAnswer"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score: 0/0"
-        android:id="@+id/sScore"/>
-
+        android:id="@+id/uScore"/>
 </LinearLayout>

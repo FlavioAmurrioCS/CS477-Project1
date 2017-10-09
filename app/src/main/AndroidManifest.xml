@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DecimalToHexActivity" />
-        <activity android:name=".HexToDecimalSignedActivity" />
-        <activity android:name=".HexToDecimalUnsignedActivity"></activity>
+        <activity android:name=".HexToDecimal" />
+        <activity android:name=".DecimalToHexSigned" />
+        <activity android:name=".DecimalToHexUnsigned"></activity>
     </application>
 
 </manifest>

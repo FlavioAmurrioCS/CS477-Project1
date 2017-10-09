@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.codeflavor.project1.DecimalToHexActivity"
+    tools:context="com.codeflavor.project1.HexToDecimal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="What are the signed and unsigned values for the 10-bit value 0x160?"
         android:textAlignment="center"
-        android:id="@+id/dthQuestion"
+        android:id="@+id/hQuestion"
         android:textSize="20sp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             android:text="Unsigned: "/>
 
         <EditText
-            android:id="@+id/dthUnsigned"
+            android:id="@+id/hUnsigned"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Decimal Number"
@@ -47,7 +47,7 @@
             android:text="Signed: "/>
 
         <EditText
-            android:id="@+id/dthSigned"
+            android:id="@+id/hSigned"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Decimal Number"
@@ -58,18 +58,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Check My Answer"
-        android:id="@+id/dhcButton"
-        android:onClick="dthCheckAnswer"/>
+        android:id="@+id/hCheck"
+        android:onClick="hCheckAnswer"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Answer: "
-        android:id="@+id/dthAnswer"
+        android:id="@+id/hAnswer"
         android:visibility="invisible"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Score: 0/0"
-        android:id="@+id/dthRoundScore"/>
+        android:id="@+id/hRoundScore"/>
 
 </LinearLayout>
